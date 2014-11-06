@@ -14,10 +14,10 @@ conn = boto.sqs.connect_to_region("us-east-1", aws_access_key_id='AKIAJ2BJXBF74J
 conn2 = boto.sqs.connect_to_region("eu-west-1", aws_access_key_id='AKIAJ2BJXBF74JPNZKCQ', aws_secret_access_key='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')
 
 rs = conn.get_all_queues()
-rs2 = conn.get_all_queues()
-print("Region Us-East:\n")
+rs2 = conn2.get_all_queues()
+print("Region Us-East:")
 for q in rs:
 	print q.id
-print("Region Ireland:\n")
+print("Region Ireland:")
 for q in rs2:
   print q.id
